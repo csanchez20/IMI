@@ -179,15 +179,9 @@ public class compr extends javax.swing.JFrame {
           
             }
         }
-        
-        
-        
-        
-        
-        
+
        
     }
-
 
     /**
      * @param args the command line arguments
@@ -210,14 +204,7 @@ public class compr extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(compr.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
+
         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
