@@ -166,12 +166,12 @@ public class compr extends javax.swing.JFrame {
     } 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
-   
-        
+        File dir = new File(arxiuComparacions);
         JFileChooser src3 = new JFileChooser();
-        int option3 = src3.showOpenDialog(this);
+        src3.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        int option3 = src3.showSaveDialog(this);
         if (option3 == JFileChooser.APPROVE_OPTION){
-            arxiuComparacions = src3.getSelectedFile().getPath();
+            src3.getCurrentDirectory();
             List<String> liniesFitxer1 = llegirFitxer(nomFitxer1);
             List<String> liniesFitxer2 = llegirFitxer(nomFitxer2);
             if(evt.getSource()==jButton1){
@@ -210,6 +210,7 @@ public class compr extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new compr().setVisible(true);
+                
             }
         });
     }
@@ -263,12 +264,15 @@ public class compr extends javax.swing.JFrame {
     }
     
     public void arxiuComparacions(String nomFitxer1, String nomFitxer2) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(arxiuComparacions, true))) {
+        File file = new File("comparacions.txt");
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {
             writer.append("Els següens arxius tenen el codi diferent:\n");
             writer.append(nomFitxer1);
             writer.append(",\n ");
             writer.append(nomFitxer2);
             writer.newLine();
+            writer.close();
+
         } catch (IOException e) {
             System.err.println("Error al escriure en el arxiu de comparacions.");
             e.printStackTrace();
