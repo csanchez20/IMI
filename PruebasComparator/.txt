@@ -1,0 +1,10 @@
+Els següens arxius tenen el codi diferent:
+/home/jfunes/SPSAGENTSSPA-develop/README.md,
+ /home/jfunes/SPSEQUIPASPA-develop/angular.json
+comparacionsEls següens arxius tenen el codi diferent:
+/home/jfunes/SPSAGENTSSPA-develop/README.md,
+ /home/jfunes/SPSEQUIPASPA-develop/angular.json
+comparacionsEls següens arxius tenen el codi diferent:
+/home/jfunes/SPSAGENTSSPA-develop/README.md,
+ /home/jfunes/SPSEQUIPASPA-develop/README.md
+comparacions
